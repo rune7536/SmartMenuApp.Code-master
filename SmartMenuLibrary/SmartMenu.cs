@@ -15,6 +15,7 @@ namespace SmartMenuLibrary
         public void Activate()
         {
             // Implement ...
+            //Prøve 
         }
     }
 }
