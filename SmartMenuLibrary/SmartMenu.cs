@@ -16,6 +16,8 @@ namespace SmartMenuLibrary
         {
             // Implement ...
             //Prøve 
+            //Virker sådan cirka
+        
         }
     }
 }
