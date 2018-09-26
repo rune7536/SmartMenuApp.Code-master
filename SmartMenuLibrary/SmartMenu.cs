@@ -16,7 +16,7 @@ namespace SmartMenuLibrary
         {
             // Implement ...
             //Prøve 
-            //Virker sådan cirka
+            Console.WriteLine("sup");
         
         }
     }
