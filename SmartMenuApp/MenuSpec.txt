@@ -3,3 +3,4 @@
 1. Beregn rektanglets areal;rectanglearea
 2. Beregn polyline længde;polylinelength
 3. Indlæs talserie;listofnumbers
+4. Kommer til det senere
