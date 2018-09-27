@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace SmartMenuLibrary
 {
     public class SmartMenu
+
     {
+        List<string> menuLines = new List<string>();
         public void LoadMenu(string path)
         {
             int counter = 0;
@@ -16,19 +18,32 @@ namespace SmartMenuLibrary
             System.IO.StreamReader file = 
                 new System.IO.StreamReader(@"..\..\MenuSpec.txt");
 
+            
+
             while ((line = file.ReadLine()) != null)
             {
-                System.Console.WriteLine(line);
+
+                menuLines.Add(line);
+
+               
                 counter++;
+
+                
             }
             file.Close();
 
-            string input = System.Console.ReadLine();
 
+            
         }
         public void Activate()
         {
+            foreach (var item in menuLines) {
+                Console.WriteLine(item);
 
+
+            }
+            string call = System.Console.ReadLine();
+            Bindings.call(call);
         }
     }
 }
