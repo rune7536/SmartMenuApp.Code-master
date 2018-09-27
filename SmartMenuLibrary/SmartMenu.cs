@@ -10,7 +10,9 @@ namespace SmartMenuLibrary
     {
         public void LoadMenu(string path)
         {
-            // Implement ...
+            System.IO.StreamReader file =
+                new System.IO.StreamReader(@"..\..\InputFil.txt");
+
         }
         public void Activate()
         {
