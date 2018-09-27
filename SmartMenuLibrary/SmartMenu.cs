@@ -13,7 +13,7 @@ namespace SmartMenuLibrary
             int counter = 0;
             string line;
 
-            System.IO.StreamReader file =
+            System.IO.StreamReader file = 
                 new System.IO.StreamReader(@"..\..\MenuSpec.txt");
 
             while ((line = file.ReadLine()) != null)
