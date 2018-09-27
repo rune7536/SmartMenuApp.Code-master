@@ -18,28 +18,19 @@ namespace SmartMenuLibrary
             System.IO.StreamReader file = 
                 new System.IO.StreamReader(@"..\..\MenuSpec.txt");
 
-            
 
             while ((line = file.ReadLine()) != null)
             {
-
-                menuLines.Add(line);
-
-               
-                counter++;
-
-                
+                menuLines.Add(line);             
+                counter++; 
             }
             file.Close();
-
-
             
         }
         public void Activate()
         {
             foreach (var item in menuLines) {
                 Console.WriteLine(item);
-
 
             }
             string call = System.Console.ReadLine();
