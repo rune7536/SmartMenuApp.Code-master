@@ -22,6 +22,9 @@ namespace SmartMenuLibrary
                 counter++;
             }
             file.Close();
+
+            string input = System.Console.ReadLine();
+
         }
         public void Activate()
         {
