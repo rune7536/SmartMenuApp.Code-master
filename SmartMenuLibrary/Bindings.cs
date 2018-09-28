@@ -3,44 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FunctionLibrary;
 
 namespace SmartMenuLibrary
 {
     public class Bindings
     {
-        internal static void call(string userInput)
+        internal static void call(int userInput)
         {
-            int choice = 0;
 
-            try
-            {
-                choice = Int32.Parse(userInput);
-            }
-
-            catch (FormatException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-            switch (choice)
+            switch (userInput)
             {
                 case 1:
-                    Console.WriteLine("case 1");
+                    Console.WriteLine(Functions.DoThis());
                     break;
                 case 2:
-                    Console.WriteLine("case 2");
+                    Console.WriteLine(Functions.DoThat());
                     break;
                 case 3:
-                    Console.WriteLine("case 3");
+                    Console.WriteLine("Skriv noget");
+                    Console.WriteLine(Functions.DoSomething(Console.ReadLine()));
                     break;
                 case 4:
-                    Console.WriteLine("case 4");
+                    Console.WriteLine(Functions.GetTheAnswerToLifeTheUniverseAndEverything());
                     break;
-                default:                      
+                default:
                     Console.WriteLine("exit");
                     break;
-                    
             }
+
         }
     }
 }

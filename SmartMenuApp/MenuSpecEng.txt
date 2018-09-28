@@ -1,0 +1,10 @@
+﻿================== Menu ==================
+
+My Fantastic Menu
+
+1. Do This;1
+2. Do That;2
+3. Do Something;3
+4. Get the Answer to Life, the Universe and Everything;4
+
+Press 0 to exit;0
