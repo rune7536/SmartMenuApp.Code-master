@@ -56,6 +56,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FunctionLibrary\FunctionLibrary.csproj">
+      <Project>{420e09eb-4efd-43ce-97a3-92e4f1bfc7ea}</Project>
+      <Name>FunctionLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SmartMenuLibrary\SmartMenuLibrary.csproj">
       <Project>{6385819e-fff1-4830-8595-d23915fb58f0}</Project>
       <Name>SmartMenuLibrary</Name>
