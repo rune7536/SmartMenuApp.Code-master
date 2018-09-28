@@ -10,7 +10,37 @@ namespace SmartMenuLibrary
     {
         internal static void call(string userInput)
         {
-            throw new NotImplementedException();
+            int choice = 0;
+
+            try
+            {
+                choice = Int32.Parse(userInput);
+            }
+
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            switch (choice)
+            {
+                case 1:
+                    Console.WriteLine("case 1");
+                    break;
+                case 2:
+                    Console.WriteLine("case 2");
+                    break;
+                case 3:
+                    Console.WriteLine("case 3");
+                    break;
+                case 4:
+                    Console.WriteLine("case 4");
+                    break;
+                default:                      
+                    Console.WriteLine("exit");
+                    break;
+
+            }
         }
     }
 }
