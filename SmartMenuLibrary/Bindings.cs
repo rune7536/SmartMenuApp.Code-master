@@ -10,7 +10,7 @@ namespace SmartMenuLibrary
     {
         internal static void call(string userInput)
         {
-            
+            throw new NotImplementedException();
         }
     }
 }

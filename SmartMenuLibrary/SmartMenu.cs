@@ -30,8 +30,10 @@ namespace SmartMenuLibrary
         public void Activate()
         {
             foreach (var item in menuLines) {
-                Console.WriteLine(item);
-
+                int i = 0;
+                string idCut = item.Split(';')[i];
+                Console.WriteLine(idCut);
+                i++;
             }
             string call = System.Console.ReadLine();
             Bindings.call(call);
