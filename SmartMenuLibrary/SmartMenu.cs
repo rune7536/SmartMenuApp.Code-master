@@ -14,10 +14,40 @@ namespace SmartMenuLibrary
         {
             int counter = 0;
             string line;
+            string menuSpecPath = "";
 
-            System.IO.StreamReader file = 
-                new System.IO.StreamReader(@"..\..\MenuSpec.txt");
+            Console.WriteLine("Vælg Sprog");
+            Console.WriteLine("Choose Language");
+            Console.WriteLine("1. For Dansk" + "\n" + "2. For English");
+            int langChoice = 0;
+            string menuLang = Console.ReadLine();
 
+            try
+            {
+                langChoice = Int32.Parse(menuLang);
+            }
+
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            if (langChoice == 1)
+            {
+                menuSpecPath = @"..\..\MenuSpec.txt";                
+            }
+            else if (langChoice == 2)
+            {
+                menuSpecPath = @"..\..\MenuSpecEng.txt";
+            }
+            else
+            {
+                Console.WriteLine("Ikke en mulighed" + "\n" + "Not an Option");
+            }
+
+
+            System.IO.StreamReader file =
+                new System.IO.StreamReader(menuSpecPath);
 
             while ((line = file.ReadLine()) != null)
             {
@@ -35,8 +65,21 @@ namespace SmartMenuLibrary
                 Console.WriteLine(idCut);
                 i++;
             }
-            string call = System.Console.ReadLine();
-            Bindings.call(call);
+
+            int choice = 0;
+            string userInput = Console.ReadLine();
+
+            try
+            {
+                choice = Int32.Parse(userInput);
+            }
+
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+            }                       
+            Bindings.call(choice);
         }
+
     }
 }

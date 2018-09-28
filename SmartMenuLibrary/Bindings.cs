@@ -9,20 +9,10 @@ namespace SmartMenuLibrary
 {
     public class Bindings
     {
-        internal static void call(string userInput)
+        internal static void call(int userInput)
         {
-            int choice = 0;       
-            try
-            {
-                choice = Int32.Parse(userInput);
-            }
 
-            catch (FormatException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-            switch (choice)
+            switch (userInput)
             {
                 case 1:
                     Console.WriteLine(Functions.DoThis());
@@ -37,10 +27,11 @@ namespace SmartMenuLibrary
                 case 4:
                     Console.WriteLine(Functions.GetTheAnswerToLifeTheUniverseAndEverything());
                     break;
-                default:                      
+                default:
                     Console.WriteLine("exit");
-                    break;                    
+                    break;
             }
+
         }
     }
 }
