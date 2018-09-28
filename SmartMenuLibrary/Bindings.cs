@@ -39,7 +39,7 @@ namespace SmartMenuLibrary
                 default:                      
                     Console.WriteLine("exit");
                     break;
-
+                    
             }
         }
     }
