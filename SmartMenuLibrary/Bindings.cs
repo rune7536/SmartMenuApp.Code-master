@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FunctionLibrary;
 
 namespace SmartMenuLibrary
 {
@@ -10,8 +11,7 @@ namespace SmartMenuLibrary
     {
         internal static void call(string userInput)
         {
-            int choice = 0;
-
+            int choice = 0;       
             try
             {
                 choice = Int32.Parse(userInput);
@@ -25,21 +25,21 @@ namespace SmartMenuLibrary
             switch (choice)
             {
                 case 1:
-                    Console.WriteLine("case 1");
+                    Console.WriteLine(Functions.DoThis());
                     break;
                 case 2:
-                    Console.WriteLine("case 2");
+                    Console.WriteLine(Functions.DoThat());
                     break;
                 case 3:
-                    Console.WriteLine("case 3");
+                    Console.WriteLine("Skriv noget");
+                    Console.WriteLine(Functions.DoSomething(Console.ReadLine()));
                     break;
                 case 4:
-                    Console.WriteLine("case 4");
+                    Console.WriteLine(Functions.GetTheAnswerToLifeTheUniverseAndEverything());
                     break;
                 default:                      
                     Console.WriteLine("exit");
-                    break;
-                    
+                    break;                    
             }
         }
     }
